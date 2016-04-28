@@ -1,0 +1,28 @@
+{
+    "feature1":{
+        "id": 1,
+        "username": "WeamBader",
+        "password": "weambader"
+    },
+    "feature2":{
+        "id": 2,
+        "username": "SereenYahya",
+        "password": "sereenyahya"
+    },
+    "feature3":{
+        "id": 3,
+        "username": "DanaBarghouthi",
+        "password": "danabarghouthi"
+    },
+    "feature4":{
+        "id": 4,
+        "username": "WailBader",
+        "password": "wailbader"
+    },
+    "feature3":{
+        "id": 5,
+        "username": "AhmedFursan",
+        "password": "ahmedfursan"
+    }
+    
+}
