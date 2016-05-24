@@ -1,0 +1,66 @@
+a:link{
+    color:#357ebd !important;
+}
+
+a:hover {
+    color: #357ebd !important;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+
+}
+
+a:hover.navheader{
+    color:black !important;
+    text-decoration: none !important;
+}
+
+a:link.navheader{
+    color:black !important;
+    text-decoration: none !important;
+}
+
+a:visited.navheader{
+    color:black !important;
+    text-decoration: none !important;
+}
+
+.navbar-header img {
+    float: left;
+    margin-left: 1px;
+    width: 100px;
+    height: 80px;
+    background: #555;
+    padding:1px;
+    border:1px solid #021a40;
+}
+
+.navbar-header h2 {
+    position: relative;
+    text-align:center;
+    left:220px;
+    font-family: 'Droid Serif', Georgia, Times, serif;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.rForm {
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+p.passNote{
+    color:#737373;
+    font-size: 12px;
+    position:relative;
+    left:15px;
+}
+.feedbackmsg {
+    background-color: lighgrey;
+    font-size: 150%;
+    margin:10%;
+    width: 80%;
+    border: 5px solid black;
+    text-align:center;
+}

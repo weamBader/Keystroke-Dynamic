@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script>
+            var timeOnKeyDown = 0;
+            var timeOnKeyUp = 0;
+            var durationTime = 0;
+            var charPress;
+            var p = 0;
+            var t = 0.015;
+            $(document).keydown(function (e) {
+                charPress = String.fromCharCode(e.which);
+                timeOnKeyDown = (Date.now() / 1000);
+            });
+            $(document).keyup(function (e) {
+                timeOnKeyUp = (Date.now() / 1000);
+                durationTime = Math.abs(timeOnKeyUp - timeOnKeyDown);
+                console.log(charPress + " \t" + durationTime);
+                url = "http://localhost:8084/WebApplication3/api/weam/" + document.cookie + "," + charPress;
+                $.getJSON(url, function (data) {
+                    console.log(charPress + "\t" + data.time);
+                    if ((durationTime - data.time) < 0.015) {
+                        p++;
+                        alert(p);
+                        if (p == 5) {
+                            alert("You have to login");
+                            var cookieData = "";
+                            document.cookie = cookieData;
+                            window.location.replace("./index.html");
+                        }
+                    }
+                });
+                durationTime = 0;
+            });
+        </script>
+        <script>
+            $(window).load(function () {
+
+                if (localStorage.getItem("loginStatus") != "true") {
+                    window.location.replace("./index.html");
+                }
+            });
+        </script>
+        <title>Your Main Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <textarea rows="4" cols="50"></textarea>
+    </body>
+</html>
